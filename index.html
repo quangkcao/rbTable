@@ -1,0 +1,699 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>rbTable - Interactive Table jQuery Plugin</title>
+<link rel="SHORTCUT ICON" href="http://runbusi.com/favicon.ico" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.rbtable.js"></script>
+<script type="text/javascript" src="http://runbusi.com/libs/js/jquery.rbcode.min.js"></script>
+<link rel="stylesheet" type="text/css" href="jquery.rbtable.css" />
+<link rel="stylesheet" type="text/css" href="index.css" />
+<!--[if lte IE 7]>
+         <link rel="stylesheet" type="text/css" href="jquery.rbtable.ie7.css" />
+<![endif]-->
+<!--script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25284477-1']);
+  _gaq.push(['_setDomainName', '.runbusi.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script-->
+</head>
+<body>
+
+<div class="content_wrapper">    
+    <div style="float:left; width:100px; text-align: right" >
+        <div class="main_nav fixed">
+            <a href="#info">
+                <div style="font-size:1.5em"><b>rbTable</b></div>
+                <div style="font-size: 0.8em">v2.0</div>
+                <div style="font-size:0.8em;padding-bottom:5px;">jQuery Plugin</div>
+            </a>
+            <ul>
+                <li><a href="#demo"><div>Demo&nbsp;&raquo;</div></a></li>
+                <li><a href="#option"><div>Options&nbsp;&raquo;</div></a></li>
+                <li><a href="#table"><div>table&nbsp;&raquo;</div></a></li>
+                <li><a href="#div"><div>div&nbsp;&raquo;</div></a></li>
+                <li><a href="#ul"><div>ul&nbsp;&raquo;</div></a></li>
+            </ul>   
+            <div style="text-align: left">
+                <div style="font-size:0.8em">Tested browsers</div>
+                <div style="padding:5px 0 5px 0;">
+                    <img alt="firefox" src="./images/firefox.png"  style="vertical-align: text-top" width="24"/>
+                    <img alt="safari" src="./images/safari.png"  style="vertical-align: text-top" width="24"/>
+                    <img alt="opera" src="./images/opera.png"  style="vertical-align: text-top" width="24"/>
+                </div>
+                <div>
+                    <img alt="google_chrome" src="./images/google_chrome.png"  style="vertical-align: text-top" width="24"/>
+                    <img alt="ie" src="./images/ie.png" style="vertical-align: text-top" width="24"/><span style="font-size:0.8em">6+</span>
+                </div>
+            </div>     
+        </div>
+    </div>
+    <div class="content" style="float:right">
+        <div id="info" class="round_box" style="background:none; color:#999;">
+            <b style="font-size: 1.3em">Customizable, sortable, and paginated table</b><br/>
+            Turn different HTML elements into an interactive table.<br/>
+            
+        </div>
+        <h2 id="demo">here it is...</h2>
+        <div class="round_box">
+            <ul class="tabs">
+                <li class="tab" value="2">HTML</li>
+                <li class="tab" value="3">JavaScript</li>
+                <li class="tab" value="4">CSS</li>
+                <li class="tab active" value="1">Demo</li>
+            </ul>
+            <br/>
+            <span class="content">
+                <div class="tab_1">
+                    <div class="paging_table_wrapper">
+                        <div class="table">
+                            <table>
+                                <tbody> 
+                                <tr class="th">
+                                    <th class="col" style="width:33%">Order</th> 
+                                    <th class="col" style="width:33%">Product</th> 
+                                    <th class="col">Post Date</th>
+                                </tr>
+                                    <tr class="tr" name="Paper">
+                                    <td class="col">1</td>
+                                    <td class="col">Paper</td>
+                                    <td class="col">08/01/2009</td>
+                                </tr>
+                                <tr class="tr" name="Bag">
+                                    <td class="col">2</td>
+                                    <td class="col">Bag</td>
+                                    <td class="col">08/01/2010</td>
+                                </tr>
+                                <tr class="tr" name="Apple">
+                                    <td class="col">3</td>
+                                    <td class="col">Apple</td>
+                                    <td class="col">08/01/2011</td>
+                                </tr>
+                                <tr class="tr" name="Glasses">
+                                    <td class="col">4</td>
+                                    <td class="col">Glasses</td>
+                                    <td class="col">08/01/2012</td>
+                                </tr>
+                                    <tr class="tr" name="Apple 2">
+                                    <td class="col">5</td>
+                                    <td class="col">Apple 2</td>
+                                    <td class="col">08/01/2011</td>
+                                </tr>
+                                <tr class="tr" name="Glasses 2">
+                                    <td class="col">6</td>
+                                    <td class="col">Glasses 2</td>
+                                    <td class="col">08/01/2012</td>
+                                </tr>
+                                <tr class="tr" name="Paper">
+                                    <td class="col">7</td>
+                                    <td class="col">Paper</td>
+                                    <td class="col">08/01/2009</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>   
+                    </div> 
+                    <p><input type="button" name="paging_table_name_result" value="Get Name Content of Selected Rows" /></p>
+                    <p><input type="button" name="paging_table_result" value="Get HTML Content of Selected Rows" /></p>
+                </div>
+                <pre class="tab_2 code">
+&lt;div class="paging_table_wrapper"&gt;
+    &lt;div class="table"&gt;
+        &lt;table&gt;
+            &lt;tbody&gt; 
+            &lt;tr class="th"&gt;
+                &lt;th class="col" style="width:33%"&gt;Order&lt;/th&gt; 
+                &lt;th class="col" style="width:33%"&gt;Product&lt;/th&gt; 
+                &lt;th class="col"&gt;Post Date&lt;/th&gt;
+            &lt;/tr&gt;
+                &lt;tr class="tr" name="Paper"&gt;
+                &lt;td class="col"&gt;1&lt;/td&gt;
+                &lt;td class="col"&gt;Paper&lt;/td&gt;
+                &lt;td class="col"&gt;08/01/2009&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr class="tr" name="Bag"&gt;
+                &lt;td class="col"&gt;2&lt;/td&gt;
+                &lt;td class="col"&gt;Bag&lt;/td&gt;
+                &lt;td class="col"&gt;08/01/2010&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr class="tr" name="Apple"&gt;
+                &lt;td class="col"&gt;3&lt;/td&gt;
+                &lt;td class="col"&gt;Apple&lt;/td&gt;
+                &lt;td class="col"&gt;08/01/2011&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr class="tr" name="Glasses"&gt;
+                &lt;td class="col"&gt;4&lt;/td&gt;
+                &lt;td class="col"&gt;Glasses&lt;/td&gt;
+                &lt;td class="col"&gt;08/01/2012&lt;/td&gt;
+            &lt;/tr&gt;
+                &lt;tr class="tr" name="Apple 2"&gt;
+                &lt;td class="col"&gt;5&lt;/td&gt;
+                &lt;td class="col"&gt;Apple 2&lt;/td&gt;
+                &lt;td class="col"&gt;08/01/2011&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr class="tr" name="Glasses 2"&gt;
+                &lt;td class="col"&gt;6&lt;/td&gt;
+                &lt;td class="col"&gt;Glasses 2&lt;/td&gt;
+                &lt;td class="col"&gt;08/01/2012&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr class="tr" name="Paper"&gt;
+                &lt;td class="col"&gt;7&lt;/td&gt;
+                &lt;td class="col"&gt;Paper&lt;/td&gt;
+                &lt;td class="col"&gt;08/01/2009&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;   
+&lt;/div&gt;</pre>
+                <pre class="tab_3 code">
+$('.paging_table_wrapper').rbTable({
+        table_border        :[1,'solid','#99cccc'],  
+        header_bg_color     :['transparent','#6699cc'],
+        header_text_color   :['#6699cc','#fff',],
+        row_bg              :['none','#99cccc','#6699cc'],
+        text_color          :['#6699cc','#6699cc','#FFF'],
+        row_border        :[1,'solid','#99cccc'], 
+        pointer_box_border  :[3,'solid','#ffcc33'],        
+        pagination :[3, 'right', 'both'] 
+});
+
+//get array of rows selected with their names
+rows=$('.paging_table_wrapper').rbTable('selected_rows','html');
+
+//get array of rows selected with their HTML contents
+rows=$('.paging_table_wrapper').rbTable('selected_rows','html');</pre>
+                <pre class="tab_4 code">
+/*table style*/
+table{
+    width:100%;
+    border-collapse: collapse;
+    text-align:center;
+}
+.table{
+    width:100%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius:10px;
+    border-radius: 10px;
+    border:1px solid #ccc;
+    overflow: hidden;
+}
+.th{
+    color:#666;
+    font-size: 1.5em;
+}
+.th .col{
+    padding:30px 0 10px 0;
+    cursor:pointer;
+    cursor:hand;
+    
+}
+.tr .col{
+    padding:10px 0 10px 0;
+}
+/*asc/desc indicator*/
+.asc{
+    background-image: url('./images/expand.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+.desc{
+    background-image: url('./images/collapse.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+.pagination{
+    padding:5px 0 5px 0;
+}
+.pagination a.page_num, .pagination a.next_nav, .pagination a.pre_nav{
+    background:#fff;
+    color:#999;
+    padding:5px 10px 5px 10px;
+    margin: 0 5px 0 5px;
+    text-decoration: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius:5px;
+    border-radius: 5px;
+}
+.pagination a:hover{
+    background:#999;
+    color:#fff;
+}
+.pagination input.page_input{
+    width:20px;
+    text-align: center;
+    background:none;
+    border:0;
+}</pre>
+            </span>
+        </div>
+        <h2 id="option">Options & Methods</h2>
+        <div class="round_box">
+            <div style="font-size: 1.5em; font-weight: bold">init</div>
+            <div>method : void</div>
+            <table cellpadding="5" border="1" style="text-align: left;">
+                <tbody>
+                    <tr>
+                        <th>Option</th>
+                        <th>&nbsp;Type&nbsp;</th>
+                        <th>Default&nbsp;Value</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>table</td>
+                        <td>String</td>
+                        <td>table</td>
+                        <td>class of table </td>
+                    </tr>
+                    <tr>
+                        <td>table_border</td>
+                        <td>Array</td>
+                        <td>[1, 'solid', '#ccc']</td>
+                        <td>the border style of table [border-width, border-style, border-color]</td>
+                    </tr>
+                    <tr>
+                        <td>header</td>
+                        <td>String</td>
+                        <td>th</td>
+                        <td>class of header in the table</td>
+                    </tr>
+                    <tr>
+                        <td>header_bg_color</td>
+                        <td>Array</td>
+                        <td>['transparent', '#ccc']</td>
+                        <td>background of header [<i>normal state, <br/>hover state</i>]</td>
+                    </tr>
+                    <tr>
+                        <td>header_text_color</td>
+                        <td>String</td>
+                        <td>['', '']</td>
+                        <td>text color in header [<i>normal state, hover state</i>] </td>
+                    </tr>
+                    <tr>
+                        <td>row</td>
+                        <td>String</td>
+                        <td>tr</td>
+                        <td>class of row that is applied</td>
+                    </tr>
+                    <tr>
+                        <td>row_bg</td>
+                        <td>Array</td>
+                        <td>['none', '#1785E6', '#336699']</td>
+                        <td>background of row [<i>normal state, hover state, click state</i>]</td>
+                    </tr>
+                    <tr>
+                        <td>text_color</td>
+                        <td>Array</td>
+                        <td>['', '', '']</td>
+                        <td>text color in row [<i>normal state, hover state, click state</i>]</td>
+                    </tr>
+                    <tr>
+                        <td>pointer_box_border</td>
+                        <td>Array</td>
+                        <td>[1, 'dashed', '#FFF']</td>
+                        <td>style for pointer box indicated when user drag mouse over the table [<i>border-width, border-style, border-color</i>]</td>
+                    </tr>
+                    <tr>
+                        <td>sort_indicator</td>
+                        <td>Array</td>
+                        <td>['asc', 'desc']</td>
+                        <td>class identify icon for asc/desc order [asc class, desc class]</td>
+                    </tr>
+                    <tr>
+                        <td>pagination</td>
+                        <td>Array</td>
+                        <td>['', 'right', 'both']</td>
+                        <td>style for paging system [<i>limit per page, position 'left' 'right' 'center' of pagination, show both 'top' and 'bottom' of table</i>]</td>
+                    </tr>
+                </tbody>
+            </table><br/>
+            <div style="font-size: 1.5em; font-weight: bold">selected_rows</div>
+            <div>method : Array of selected rows</div>
+            <table cellpadding="5" border="1" style="text-align: left;">
+                <tbody>
+                    <tr>
+                        <th>Option</th>
+                        <th>&nbsp;Type&nbsp;</th>
+                        <th>Default&nbsp;Value</th>
+                        <th>Description</th>
+                    </tr> 
+                    <tr>
+                        <td>attr</td>
+                        <td>String</td>
+                        <td>name</td>
+                        <td>attribute of row, for example, 'name' or 'id'. if attr='html' return HTML content</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h2 id="table" ><i>table</i> element</h2>
+        <div class="round_box">
+            <ul class="tabs">
+                <li class="tab" value="2">HTML</li>
+                <li class="tab" value="3">JavaScript</li>
+                <li class="tab active" value="1">Demo</li>
+            </ul>
+            <br/>
+            <span class="content">
+                <div class="tab_1">
+                    <div class="table_wrapper">
+                        <div class="table">
+                            <table>
+                                <tbody> 
+                                <tr class="th">
+                                    <th class="col" style="width:33%">Order</th> 
+                                    <th class="col" style="width:33%">Product</th> 
+                                    <th class="col">Post Date</th>
+                                </tr>
+                                    <tr class="tr" name="Paper">
+                                    <td class="col">1</td>
+                                    <td class="col">Paper</td>
+                                    <td class="col">08/01/2009</td>
+                                </tr>
+                                <tr class="tr" name="Bag">
+                                    <td class="col">2</td>
+                                    <td class="col">Bag</td>
+                                    <td class="col">08/01/2010</td>
+                                </tr>
+                                <tr class="tr" name="Apple">
+                                    <td class="col">3</td>
+                                    <td class="col">Apple</td>
+                                    <td class="col">08/01/2011</td>
+                                </tr>
+                                <tr class="tr" name="Glasses">
+                                    <td class="col">4</td>
+                                    <td class="col">Glasses</td>
+                                    <td class="col">08/01/2012</td>
+                                </tr>
+                                    <tr class="tr" name="Apple 2">
+                                    <td class="col">5</td>
+                                    <td class="col">Apple 2</td>
+                                    <td class="col">08/01/2011</td>
+                                </tr>
+                                <tr class="tr" name="Glasses 2">
+                                    <td class="col">6</td>
+                                    <td class="col">Glasses 2</td>
+                                    <td class="col">08/01/2012</td>
+                                </tr>
+                                <tr class="tr" name="Paper">
+                                    <td class="col">7</td>
+                                    <td class="col">Paper</td>
+                                    <td class="col">08/01/2009</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>   
+                    </div>
+                    <p><input type="button" name="table_result" value="Get Name of Selected Rows" /></p>
+                </div>
+                <pre class="tab_2 code">
+&lt;div class="table_wrapper"&gt;
+    &lt;div class="table"&gt;
+        &lt;table&gt;
+            &lt;tbody&gt; 
+            &lt;tr class="th"&gt;
+                &lt;th class="col" style="width:33%"&gt;Order&lt;/th&gt; 
+                &lt;th class="col" style="width:33%"&gt;Product&lt;/th&gt; 
+                &lt;th class="col"&gt;Post Date&lt;/th&gt;
+            &lt;/tr&gt;
+                &lt;tr class="tr" name="Paper"&gt;
+                &lt;td class="col"&gt;1&lt;/td&gt;
+                &lt;td class="col"&gt;Paper&lt;/td&gt;
+                &lt;td class="col"&gt;08/01/2009&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr class="tr" name="Bag"&gt;
+                &lt;td class="col"&gt;2&lt;/td&gt;
+                &lt;td class="col"&gt;Bag&lt;/td&gt;
+                &lt;td class="col"&gt;08/01/2010&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr class="tr" name="Apple"&gt;
+                &lt;td class="col"&gt;3&lt;/td&gt;
+                &lt;td class="col"&gt;Apple&lt;/td&gt;
+                &lt;td class="col"&gt;08/01/2011&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr class="tr" name="Glasses"&gt;
+                &lt;td class="col"&gt;4&lt;/td&gt;
+                &lt;td class="col"&gt;Glasses&lt;/td&gt;
+                &lt;td class="col"&gt;08/01/2012&lt;/td&gt;
+            &lt;/tr&gt;
+                &lt;tr class="tr" name="Apple 2"&gt;
+                &lt;td class="col"&gt;5&lt;/td&gt;
+                &lt;td class="col"&gt;Apple 2&lt;/td&gt;
+                &lt;td class="col"&gt;08/01/2011&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr class="tr" name="Glasses 2"&gt;
+                &lt;td class="col"&gt;6&lt;/td&gt;
+                &lt;td class="col"&gt;Glasses 2&lt;/td&gt;
+                &lt;td class="col"&gt;08/01/2012&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr class="tr" name="Paper"&gt;
+                &lt;td class="col"&gt;7&lt;/td&gt;
+                &lt;td class="col"&gt;Paper&lt;/td&gt;
+                &lt;td class="col"&gt;08/01/2009&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;   
+&lt;/div&gt;</pre>
+                <pre class="tab_3 code">
+$('.table_wrapper').rbTable();</pre>
+            </span>
+        </div>
+        <h2 id="div"><i>div</i> element</h2>
+        <div class="round_box">
+            <ul class="tabs">
+                <li class="tab" value="2">HTML</li>
+                <li class="tab" value="3">JavaScript</li>
+                <li class="tab" value="4">CSS</li>
+                <li class="tab active" value="1" title="demo_content">Demo</li>
+            </ul>
+            <br/>
+            <span class="content">
+                <div class="tab_1">
+                    <div class="table_wrapper">
+                        <div class="table">
+                            <div>
+                                <div class="th">
+                                    <div class="col" style="width:33%;">Order</div><div class="col" style="width:33%;">Product</div><div class="col" style="width:34%">Post Date</div>
+                                </div>
+                                <div class="tr" name='Paper'>
+                                    <div class="col" style="width:33%;">1</div><div class="col" style="width:33%;">Paper</div><div class="col" style="width:34%">08/01/2009</div>
+                                </div>
+                                <div class="tr" name='Bag'>
+                                    <div class="col" style="width:33%;">2</div><div class="col" style="width:33%;">Bag</div><div class="col" style="width:34%">08/01/2010</div>
+                                </div>
+                                <div class="tr" name='Apple'>
+                                    <div class="col" style="width:33%;">3</div><div class="col" style="width:33%;">Apple</div><div class="col" style="width:34%">08/01/2011</div>
+                                </div>
+                                <div class="tr" name='Glasses'>
+                                    <div class="col" style="width:33%;">4</div><div class="col" style="width:33%;">Glasses</div><div class="col" style="width:34%;">08/01/2012</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                    <p><input type="button" name="div_result" value="Get Name of Selected Rows" /></p>
+                </div>
+                <pre class="tab_2 code">
+&lt;div class="table_wrapper"&gt;
+    &lt;div class="table"&gt;
+        &lt;div&gt;
+            &lt;div class="th"&gt;
+                &lt;div class="col" style="width:33%;"&gt;Order&lt;/div&gt;&lt;div class="col" style="width:33%;"&gt;Product&lt;/div&gt;&lt;div class="col" style="width:34%"&gt;Post Date&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="tr" name='Paper'&gt;
+                &lt;div class="col" style="width:33%;"&gt;1&lt;/div&gt;&lt;div class="col" style="width:33%;"&gt;Paper&lt;/div&gt;&lt;div class="col" style="width:34%"&gt;08/01/2009&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="tr" name='Bag'&gt;
+                &lt;div class="col" style="width:33%;"&gt;2&lt;/div&gt;&lt;div class="col" style="width:33%;"&gt;Bag&lt;/div&gt;&lt;div class="col" style="width:34%"&gt;08/01/2010&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="tr" name='Apple'&gt;
+                &lt;div class="col" style="width:33%;"&gt;3&lt;/div&gt;&lt;div class="col" style="width:33%;"&gt;Apple&lt;/div&gt;&lt;div class="col" style="width:34%"&gt;08/01/2011&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="tr" name='Glasses'&gt;
+                &lt;div class="col" style="width:33%;"&gt;4&lt;/div&gt;&lt;div class="col" style="width:33%;"&gt;Glasses&lt;/div&gt;&lt;div class="col" style="width:34%;"&gt;08/01/2012&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt; 
+                </pre>
+                <pre class="tab_3 code">
+$('.table_wrapper').rbTable();
+                </pre>
+                <pre class="tab_4 code">
+/*div style*/
+div.table div.th .col, div.table div.tr .col{
+    display: inline-block;
+}
+/*ie div style*/
+div.table div.th .col, div.table div.tr .col{
+    display: inline;
+    zoom: 1;
+}</pre>
+            </span>
+        </div>
+
+        <h2 id="ul"><i>ol</i> or <i>ul</i> -list element</h2>
+        <div class="round_box">    
+            <ul class="tabs">
+                <li class="tab" value="2">HTML</li>
+                <li class="tab" value="3">JavaScript</li>
+                <li class="tab" value="4">CSS</li>
+                <li class="tab active" value="1">Demo</li>
+            </ul>
+            <br/>
+            <span class="content">
+                <div class="tab_1">
+                    <div class="table_wrapper">
+                        <div class="table">
+                            <ul>
+                                <li class="th">
+                                    <div class="col" style="width:33%;">Order</div><div class="col" style="width:33%;">Product</div><div class="col" style="width:34%;">Post Date</div>
+                                </li>
+                                <li class="tr" name='Paper'><div class="col" style="width:33%;">1</div><div class="col" style="width:33%;">Paper</div><div class="col" style="width:34%;">08/01/2009</div>
+                                </li>
+                                <li class="tr" name='Bag'>
+                                    <div class="col" style="width:33%;">2</div><div class="col" style="width:33%;">Bag</div><div class="col" style="width:34%">08/01/2010</div>
+                                </li>
+                                <li class="tr" name='Apple'>
+                                    <div class="col" style="width:33%;">3</div><div class="col" style="width:33%">Apple</div><div class="col" style="width:34%">08/01/2011</div>
+                                </li>
+                                <li class="tr" name='Glasses'>
+                                    <div class="col" style="width:33%;">4</div><div class="col" style="width:33%;">Glasses</div><div class="col" style="width:34%">08/01/2012</div>
+                                </li>
+                            </ul>
+                        </div>    
+                    </div>    
+                    <p><input type="button" name="ul_result" value="Get Name of Selected Rows" /></p>
+                </div>
+                <pre class="tab_2 code">
+&lt;div class="table_wrapper"&gt;
+    &lt;div class="table"&gt;
+        &lt;ul&gt;
+            &lt;li class="th"&gt;
+                &lt;div class="col" style="width:33%;"&gt;Order&lt;/div&gt;&lt;div class="col" style="width:33%;"&gt;Product&lt;/div&gt;&lt;div class="col" style="width:34%;"&gt;Post Date&lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li class="tr" name='Paper'&gt;&lt;div class="col" style="width:33%;"&gt;1&lt;/div&gt;&lt;div class="col" style="width:33%;"&gt;Paper&lt;/div&gt;&lt;div class="col" style="width:34%;"&gt;08/01/2009&lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li class="tr" name='Bag'&gt;
+                &lt;div class="col" style="width:33%;"&gt;2&lt;/div&gt;&lt;div class="col" style="width:33%;"&gt;Bag&lt;/div&gt;&lt;div class="col" style="width:34%"&gt;08/01/2010&lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li class="tr" name='Apple'&gt;
+                &lt;div class="col" style="width:33%;"&gt;3&lt;/div&gt;&lt;div class="col" style="width:33%"&gt;Apple&lt;/div&gt;&lt;div class="col" style="width:34%"&gt;08/01/2011&lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li class="tr" name='Glasses'&gt;
+                &lt;div class="col" style="width:33%;"&gt;4&lt;/div&gt;&lt;div class="col" style="width:33%;"&gt;Glasses&lt;/div&gt;&lt;div class="col" style="width:34%"&gt;08/01/2012&lt;/div&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;    
+&lt;/div&gt;</pre>
+                <pre class="tab_3 code">
+$('.table_wrapper').rbTable();</pre>
+                <pre class="tab_4 code">
+/*list style*/
+.table ul, .table ol{
+    list-style: none;
+    margin:0; 
+    padding:0;
+}
+.table ul li.th .col, .table ul li.tr .col, .table ol li.th .col, .table ol li.tr .col{
+    display: inline-block;
+}
+/*ie list style*/
+.table ul li.th .col, .table ul li.tr .col, .table ol li.th .col, .table ol li.tr .col{
+    display: inline;
+    zoom: 1;
+}</pre>
+            </span>        
+        </div>
+    </div>    
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('pre.code').rbCode({text_color:'#FFF',
+                        list_color:'#336699',
+                        bg:'#333',
+                        zebra_cross_bg:'#3b3b3b',
+                        zebra_bg:'#333',
+                        a_number:['Hide Number','Show Number'],
+                        a_zebra:['Hide Zebra','Show Zebra'],
+                        a_popout:['Pop out','Close']
+	});	
+    $('.table_wrapper').rbTable();
+    $('.paging_table_wrapper').rbTable({
+                                        table_border        :[1,'solid','#99cccc'],  
+                                        header_bg_color     :['transparent','#6699cc'],
+                                        header_text_color   :['#6699cc','#fff',],
+                                        row_bg              :['none','#99cccc','#6699cc'],
+                                        text_color          :['#6699cc','#6699cc','#FFF'],
+                                        row_border        :[1,'solid','#99cccc'], 
+                                        pointer_box_border  :[3,'solid','#ffcc33'],        
+                                        pagination :[3, 'right', 'both'] });
+    var rows;
+    var count;
+     $('input:button[name=paging_table_name_result]').click(function(){
+            rows=$('.paging_table_wrapper').rbTable('selected_rows','name');
+            count=rows.length;
+            alert((count==0)?'No Item Selected  ':(count+' SELECTED including : '+rows));
+    });
+    $('input:button[name=paging_table_result]').click(function(){
+            rows=$('.paging_table_wrapper').rbTable('selected_rows','html');
+            count=rows.length;
+            alert((count==0)?'No Item Selected  ':(count+' SELECTED including : '+rows));
+    });
+    $('input:button[name=table_result]').click(function(){
+            rows=$('.table_wrapper',$(this).parent().parent()).rbTable('selected_rows','name');
+            count=rows.length;
+            alert((count==0)?'No Item Selected  ':(count+' SELECTED including : '+rows));
+    });
+    $('input:button[name=div_result]').click(function(){
+            rows=$('.table_wrapper',$(this).parent().parent()).rbTable('selected_rows','name');
+            count=rows.length;
+            alert((count==0)?'No Item Selected':(count+' SELECTED including : '+rows));
+    });	
+    $('input:button[name=ul_result]').click(function(){
+            rows=$('.table_wrapper',$(this).parent().parent()).rbTable('selected_rows','name');
+            count=rows.length;
+            alert((count==0)?'No Item Selected':(count+' SELECTED including : '+rows));
+    })
+//
+    $('ul.tabs').children().each(function(){
+        if ($(this).val()=="1"){
+            $('.tab_'+$(this).val(),$('.content',$(this).parent().parent())).show();
+        }else{
+            $('.tab_'+$(this).val(),$('.content',$(this).parent().parent())).hide();
+        }
+    })
+    $('.tab',$('.round_box')).click(function(){
+        var tab=$(this);
+        $(this).parent().children().each(function(){
+            if ($(this).val()==tab.val()){
+                $(this).addClass('active');
+            }else{
+                $(this).removeClass('active');
+            }
+        })
+        $('.content',$(this).parent().parent()).children().each(function(){
+            if ($(this).hasClass('tab_'+tab.val())){
+                $(this).show();
+            }else{
+                $(this).hide();
+            }
+        })
+
+    })
+    //
+    
+})
+</script>
+</body>
+</html>

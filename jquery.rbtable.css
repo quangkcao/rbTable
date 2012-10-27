@@ -1,0 +1,81 @@
+/*table style*/
+table{
+    width:100%;
+    border-collapse: collapse;
+    text-align:center;
+}
+.table_wrapper{
+}
+.table{
+    width:100%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius:10px;
+    border-radius: 10px;
+    border:1px solid #ccc;
+    overflow: hidden;
+}
+.th{
+    color:#666;
+    font-size: 1.5em;
+}
+.th .col{
+    padding:30px 0 10px 0;
+    cursor:pointer;
+    cursor:hand;
+    
+}
+.tr .col{
+    padding:10px 0 10px 0;
+}
+/*div style*/
+div.table div.th .col, div.table div.tr .col{
+    display: inline-block;
+}
+/*list style*/
+.table ul, .table ol{
+    list-style: none;
+    margin:0; 
+    padding:0;
+}
+.table ul li.th .col, .table ul li.tr .col, .table ol li.th .col, .table ol li.tr .col{
+    display: inline-block;
+}
+/*asc/desc indicator*/
+.asc{
+    background-image: url('./images/expand.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+.desc{
+    background-image: url('./images/collapse.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+input[type=button]{
+    width:100%;
+    font-weight: bold;
+    padding:20px 0 20px 0;
+}
+.pagination{
+    padding:5px 0 5px 0;
+}
+.pagination a.page_num, .pagination a.next_nav, .pagination a.pre_nav{
+    background:#fff;
+    color:#999;
+    padding:5px 10px 5px 10px;
+    margin: 0 5px 0 5px;
+    text-decoration: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius:5px;
+    border-radius: 5px;
+}
+.pagination a:hover{
+    background:#999;
+    color:#fff;
+}
+.pagination input.page_input{
+    width:20px;
+    text-align: center;
+    background:none;
+    border:0;
+}

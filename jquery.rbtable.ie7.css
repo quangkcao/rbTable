@@ -1,0 +1,10 @@
+/*div style*/
+div.table div.th .col, div.table div.tr .col{
+    display: inline;
+    zoom: 1;
+}
+/*list style*/
+.table ul li.th .col, .table ul li.tr .col, .table ol li.th .col, .table ol li.tr .col{
+    display: inline;
+    zoom: 1;
+}
