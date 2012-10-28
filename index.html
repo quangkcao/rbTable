@@ -1,39 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="rbTable : Customizable, sortable, and paginated table - Turn different HTML elements into an interactive table." />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>rbTable by quangkcao</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>rbTable</title>
   </head>
-
   <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/quangkcao/rbTable">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/quangkcao/rbTable/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/quangkcao/rbTable/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/quangkcao/rbTable">View on GitHub</a>
+    <div class="wrapper">
 
-          <h1 id="project_title">rbTable</h1>
-          <h2 id="project_tagline">Customizable, sortable, and paginated table - Turn different HTML elements into an interactive table.</h2>
+      <section>
+        <div id="title">
+          <h1>rbTable</h1>
+          <p>Customizable, sortable, and paginated table - Turn different HTML elements into an interactive table.</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/quangkcao">quangkcao</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
+        </div>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/quangkcao/rbTable/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/quangkcao/rbTable/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
         <h1>rbTable v2.0</h1>
 
-<h3>jQuery Plugin</h3>
+<h3>jQuery Plugin <a href="http://runbusi.com/script/rbtable/">DEMO</a>
+</h3>
 
 <p>Customizable, sortable, and paginated table - Turn different HTML elements into an interactive table.</p>
 
@@ -110,24 +118,15 @@
 <strong>attr</strong>:'name'// attribute of row, for example, if attr='html' return html content</li>
 </ul><h3>Author</h3>
 
-<hr><p>Quang K. Cao </p>
-
-<p><a href="http://runbusi.com">http://runbusi.com</a></p>
+<hr><p>Quang K. Cao @ <a href="http://runbusi.com">runbusi.com</a></p>
 
 <h3>License</h3>
 
 <hr><p>Licensed under the MIT license.</p>
       </section>
-    </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">rbTable maintained by <a href="https://github.com/quangkcao">quangkcao</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
     </div>
-
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
               <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
@@ -138,7 +137,6 @@
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
-
 
   </body>
 </html>
