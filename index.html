@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>rbTable by quangkcao</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/quangkcao/rbTable">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/quangkcao/rbTable/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/quangkcao/rbTable/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>rbTable</h1>
+          <p>Customizable, sortable, and paginated table - Turn different HTML elements into an interactive table.</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/quangkcao">quangkcao</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>rbTable v2.0</h1>
+
+<h3>jQuery Plugin</h3>
+
+<p>Customizable, sortable, and paginated table - Turn different HTML elements into an interactive table.</p>
+
+<hr><div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'.paging_table_wrapper'</span><span class="p">).</span><span class="nx">rbTable</span><span class="p">({</span>
+    <span class="nx">table_border</span> <span class="o">:</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="s1">'solid'</span><span class="p">,</span><span class="s1">'#99cccc'</span><span class="p">],</span>
+    <span class="nx">header_bg_color</span> <span class="o">:</span><span class="p">[</span><span class="s1">'transparent'</span><span class="p">,</span><span class="s1">'#6699cc'</span><span class="p">],</span>
+    <span class="nx">header_text_color</span> <span class="o">:</span><span class="p">[</span><span class="s1">'#6699cc'</span><span class="p">,</span><span class="s1">'#fff'</span><span class="p">,],</span>
+    <span class="nx">row_bg</span> <span class="o">:</span><span class="p">[</span><span class="s1">'none'</span><span class="p">,</span><span class="s1">'#99cccc'</span><span class="p">,</span><span class="s1">'#6699cc'</span><span class="p">],</span>
+    <span class="nx">text_color</span> <span class="o">:</span><span class="p">[</span><span class="s1">'#6699cc'</span><span class="p">,</span><span class="s1">'#6699cc'</span><span class="p">,</span><span class="s1">'#FFF'</span><span class="p">],</span>
+    <span class="nx">row_border</span> <span class="o">:</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="s1">'solid'</span><span class="p">,</span><span class="s1">'#99cccc'</span><span class="p">],</span>
+    <span class="nx">pointer_box_border</span> <span class="o">:</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="s1">'solid'</span><span class="p">,</span><span class="s1">'#ffcc33'</span><span class="p">],</span>
+    <span class="nx">pagination</span> <span class="o">:</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="s1">'right'</span><span class="p">,</span> <span class="s1">'both'</span><span class="p">]</span>
+    <span class="p">});</span>
+</pre></div>
+
+<p><strong>get array of rows selected with their names by default</strong></p>
+
+<div class="highlight"><pre>    <span class="nx">rows</span><span class="o">=</span><span class="nx">$</span><span class="p">(</span><span class="s1">'.paging_table_wrapper'</span><span class="p">).</span><span class="nx">rbTable</span><span class="p">(</span><span class="s1">'selected_rows'</span><span class="p">);</span>
+</pre></div>
+
+<p><strong>get array of rows selected with their HTML contents</strong></p>
+
+<div class="highlight"><pre>    <span class="nx">rows</span><span class="o">=</span><span class="nx">$</span><span class="p">(</span><span class="s1">'.paging_table_wrapper'</span><span class="p">).</span><span class="nx">rbTable</span><span class="p">(</span><span class="s1">'selected_rows'</span><span class="p">,</span><span class="s1">'html'</span><span class="p">);</span>
+</pre></div>
+
+<h3>DESCRIPTION</h3>
+
+<hr><h4>DEFAULT VALUES</h4>
+
+<h5>init : void - initial method</h5>
+
+<ul>
+<li>
+<strong>table</strong>:'table',//class of table<br>
+</li>
+<li>
+<strong>table_border</strong>:[1,'solid','#ccc'],//the border style of table</li>
+<li>              [border-width, border-style, border-color]</li>
+<li>
+<strong>header</strong>:'th',//class of header<br>
+</li>
+<li>
+<strong>header_bg_color</strong>:['transparent','#ccc'],//background of header<br>
+</li>
+<li>      [normal state, hover state]</li>
+<li>
+<strong>header_text_color</strong>:['',''],//text color in header</li>
+<li>      [normal state, hover state]<br>
+</li>
+<li>
+<strong>row</strong>:'tr',//class of row that is applied<br>
+</li>
+<li>
+<strong>row_bg</strong>:['none','#ccc','#666'],//background of row<br>
+</li>
+<li>      [normal state, hover state, click state]</li>
+<li>
+<strong>text_color</strong>:['','',''],//text color in row</li>
+<li>        [normal state, hover state, click state]</li>
+<li>
+<strong>pointer_box_border</strong>:[1,'dashed','#FFF'],//style for pointer box indicated when user drag mouse over the table<br>
+</li>
+<li>                  [border-width, border-style, border-color]</li>
+<li>
+<strong>sort_indicator</strong>:['asc', 'desc'],//class identify icon for asc/desc order</li>
+<li>        [asc class, desc class]</li>
+<li>
+<strong>pagination</strong>:['', 'right', 'both'] ,//</li>
+<li>         [limit per page, position 'left' 'right' 'center' of pagination, show both 'top' and 'bottom' of table]] </li>
+</ul><h5>selected_rows : array of selected row by 'attr' attribute - method</h5>
+
+<ul>
+<li>
+<strong>attr</strong>:'name'// attribute of row, for example, if attr='html' return html content</li>
+</ul><h3>Author</h3>
+
+<hr><p>Quang K. Cao </p>
+
+<p><a href="http://runbusi.com">http://runbusi.com</a></p>
+
+<h3>License</h3>
+
+<hr><p>Licensed under the MIT license.</p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-25284477-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
