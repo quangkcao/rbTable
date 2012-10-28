@@ -1,5 +1,5 @@
 # rbTable v2.0
-###jQuery Plugin [DEMO](http://runbusi.com/script/rbcode/)
+###jQuery Plugin [DEMO](http://runbusi.com/script/rbtable/)
 Customizable, sortable, and paginated table - Turn different HTML elements into an interactive table.
 
 ***
@@ -55,9 +55,7 @@ $('.paging_table_wrapper').rbTable({
 ###Author
 
 ***
-Quang K. Cao 
-
-http://runbusi.com
+Quang K. Cao @ [runbusi.com](http://runbusi.com)
 
 ###License
 
