@@ -2,9 +2,7 @@
 ###jQuery Plugin
 Customizable, sortable, and paginated table - Turn different HTML elements into an interactive table.
 
-###DEMO
-***
-http://runbusi.com/script/rbtable/
+[DEMO](http://runbusi.com/script/rbcode/)
 ***
 ```javascript
 $('.paging_table_wrapper').rbTable({
